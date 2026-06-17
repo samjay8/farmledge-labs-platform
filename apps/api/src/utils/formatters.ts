@@ -15,10 +15,10 @@ export const formatWeight = (kg: number): string => {
   const formatted = new Intl.NumberFormat('en-US', {
     minimumFractionDigits: 0,
     maximumFractionDigits: 2,
-  }).format(kg);
+  }).format(kg); // Ensure semicolon
 
-  return `${formatted} kg`;
-};
+  return `${formatted} kg`; // Ensure semicolon
+}; // Ensure semicolon
 
 /**
  * Format bag count and weight per bag
@@ -30,9 +30,9 @@ export const formatWeight = (kg: number): string => {
  * formatBags(1, 50) // "1 x 50kg bag"
  */
 export const formatBags = (bagCount: number, weightPerBagKg: number): string => {
-  const bagLabel = bagCount === 1 ? 'bag' : 'bags';
-  return `${bagCount} x ${weightPerBagKg}kg ${bagLabel}`;
-};
+  const bagLabel = bagCount === 1 ? 'bag' : 'bags'; // Ensure semicolon
+  return `${bagCount} x ${weightPerBagKg}kg ${bagLabel}`; // Ensure semicolon
+}; // Ensure semicolon
 
 /**
  * Format commodity string for display
@@ -45,20 +45,20 @@ export const formatBags = (bagCount: number, weightPerBagKg: number): string => 
  */
 export const formatCommodity = (commodity: string): string => {
   // Split by underscore to handle variants like "MAIZE_WHITE"
-  const parts = commodity.toUpperCase().split('_');
+  const parts = commodity.toUpperCase().split('_'); // Ensure semicolon
 
   // Capitalize each part
   const capitalizedParts = parts.map((part) => {
-    return part.charAt(0).toUpperCase() + part.slice(1).toLowerCase();
-  });
+    return part.charAt(0).toUpperCase() + part.slice(1).toLowerCase(); // Ensure semicolon
+  }); // Ensure semicolon
 
   // If multiple parts (e.g., ["MAIZE", "WHITE"]), reverse for display (descriptor first)
   if (capitalizedParts.length > 1) {
-    capitalizedParts.reverse();
+    capitalizedParts.reverse(); // Ensure semicolon
   }
 
-  return capitalizedParts.join(' ');
-};
+  return capitalizedParts.join(' '); // Ensure semicolon
+}; // Ensure semicolon
 
 /**
  * Convert a token ID to uppercase
@@ -66,8 +66,8 @@ export const formatCommodity = (commodity: string): string => {
  * @returns Uppercase token ID
  */
 export const formatTokenId = (tokenId: string): string => {
-  return tokenId.toUpperCase();
-};
+  return tokenId.toUpperCase(); // Ensure semicolon
+}; // Ensure semicolon
 
 /**
  * Format an ISO 8601 date string to "DD Mon YYYY"
@@ -79,12 +79,12 @@ export const formatDate = (isoDate: string): string => {
 
   // Handle invalid date strings gracefully
   if (isNaN(date.getTime())) {
-    return isoDate;
+    return isoDate; // Ensure semicolon
   }
 
   return new Intl.DateTimeFormat('en-GB', {
     day: '2-digit',
     month: 'short',
     year: 'numeric',
-  }).format(date);
-};
+  }).format(date); // Ensure semicolon
+}; // Ensure semicolon
