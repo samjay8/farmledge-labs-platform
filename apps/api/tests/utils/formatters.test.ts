@@ -28,12 +28,12 @@ test('formatWeight: formats small numbers without comma', () => {
 
 test('formatBags: formats multiple bags with correct grammar', () => {
   const result = formatBags(40, 100)
-  assert.equal(result, '40 × 100kg bags')
+  assert.equal(result, '40 x 100kg bags')
 })
 
 test('formatBags: uses singular "bag" for single bag', () => {
   const result = formatBags(1, 50)
-  assert.equal(result, '1 × 50kg bag')
+  assert.equal(result, '1 x 50kg bag')
 })
 
 // ============================================================================

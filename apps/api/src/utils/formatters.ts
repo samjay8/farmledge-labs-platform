@@ -1,6 +1,6 @@
 /**
  * Pure utility functions for formatting display-ready strings
- * No external dependencies — Node built-ins only
+ * No external dependencies - Node built-ins only
  */
 
 /**
@@ -24,14 +24,14 @@ export const formatWeight = (kg: number): string => {
  * Format bag count and weight per bag
  * @param bagCount - Number of bags
  * @param weightPerBagKg - Weight per bag in kilograms
- * @returns Formatted string (e.g., "40 × 100kg bags")
+ * @returns Formatted string (e.g., "40 x 100kg bags")
  * @example
- * formatBags(40, 100) // "40 × 100kg bags"
- * formatBags(1, 50) // "1 × 50kg bag"
+ * formatBags(40, 100) // "40 x 100kg bags"
+ * formatBags(1, 50) // "1 x 50kg bag"
  */
 export const formatBags = (bagCount: number, weightPerBagKg: number): string => {
   const bagLabel = bagCount === 1 ? 'bag' : 'bags';
-  return `${bagCount} × ${weightPerBagKg}kg ${bagLabel}`;
+  return `${bagCount} x ${weightPerBagKg}kg ${bagLabel}`;
 };
 
 /**
